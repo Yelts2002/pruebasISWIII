@@ -1,0 +1,70 @@
+digraph "ContextMapGraph" {
+graph ["imagepath"="/tmp/GraphvizJava"]
+"AtencionAlCliente" ["margin"="0.3","orientation"="120","shape"="egg","fontsize"="16","style"="bold","label"="AtencionAlCliente\n","fontname"="sans-serif"]
+"Usuario" ["margin"="0.3","orientation"="168","shape"="egg","fontsize"="16","style"="bold","label"="Usuario\n","fontname"="sans-serif"]
+"InicioAutentificacion" ["margin"="0.3","orientation"="298","shape"="egg","fontsize"="16","style"="bold","label"="InicioAutentificacion\n","fontname"="sans-serif"]
+"ComercioOnline" ["margin"="0.3","orientation"="71","shape"="egg","fontsize"="16","style"="bold","label"="ComercioOnline\n","fontname"="sans-serif"]
+"GestiondeContenido" ["margin"="0.3","orientation"="51","shape"="egg","fontsize"="16","style"="bold","label"="GestiondeContenido\n","fontname"="sans-serif"]
+"OptimizadorDeMotoresDeBusqueda" ["margin"="0.3","orientation"="180","shape"="egg","fontsize"="16","style"="bold","label"="OptimizadorDeMotoresDeBusqueda\n","fontname"="sans-serif"]
+"SocialMediaIntegration" ["margin"="0.3","orientation"="222","shape"="egg","fontsize"="16","style"="bold","label"="SocialMediaIntegration\n","fontname"="sans-serif"]
+"GestionDeInventarios" ["margin"="0.3","orientation"="336","shape"="egg","fontsize"="16","style"="bold","label"="GestionDeInventarios\n","fontname"="sans-serif"]
+"GestionDeEnvios" ["margin"="0.3","orientation"="51","shape"="egg","fontsize"="16","style"="bold","label"="GestionDeEnvios\n","fontname"="sans-serif"]
+"ServicioDeGeocalizacion" ["margin"="0.3","orientation"="79","shape"="egg","fontsize"="16","style"="bold","label"="ServicioDeGeocalizacion\n","fontname"="sans-serif"]
+"EmailServicesIntegration" ["margin"="0.3","orientation"="154","shape"="egg","fontsize"="16","style"="bold","label"="EmailServicesIntegration\n","fontname"="sans-serif"]
+"GestionDePagos" ["margin"="0.3","orientation"="94","shape"="egg","fontsize"="16","style"="bold","label"="GestionDePagos\n","fontname"="sans-serif"]
+"PaymentGateway" ["margin"="0.3","orientation"="70","shape"="egg","fontsize"="16","style"="bold","label"="PaymentGateway\n","fontname"="sans-serif"]
+"GestionDePoliticasEmpresariales" ["margin"="0.3","orientation"="196","shape"="egg","fontsize"="16","style"="bold","label"="GestionDePoliticasEmpresariales\n","fontname"="sans-serif"]
+"AtencionAlCliente" -> "Usuario" ["fontsize"="12","style"="bold","label"="Shared Kernel","dir"="none","fontname"="sans-serif"]
+"Usuario" -> "InicioAutentificacion" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"ComercioOnline" -> "GestiondeContenido" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"ComercioOnline" -> "Usuario" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"ComercioOnline" -> "GestionDeInventarios" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"ComercioOnline" -> "GestionDeEnvios" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"GestiondeContenido" -> "OptimizadorDeMotoresDeBusqueda" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"GestiondeContenido" -> "SocialMediaIntegration" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"GestionDeEnvios" -> "ServicioDeGeocalizacion" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"GestionDeEnvios" -> "EmailServicesIntegration" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"GestionDePagos" -> "ComercioOnline" ["fontsize"="12","style"="bold","label"="Shared Kernel","dir"="none","fontname"="sans-serif"]
+"GestionDePagos" -> "PaymentGateway" ["headlabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">D</td></tr>
+</table>>,"labeldistance"="0","fontsize"="12","taillabel"=<<table cellspacing="0" cellborder="0" border="0">
+<tr><td bgcolor="white">U</td></tr>
+</table>>,"style"="bold","label"="                                        ","dir"="none","fontname"="sans-serif"]
+"GestionDePoliticasEmpresariales" -> "AtencionAlCliente" ["fontsize"="12","style"="bold","label"="Shared Kernel","dir"="none","fontname"="sans-serif"]
+}

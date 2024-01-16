@@ -1,0 +1,122 @@
+/* Example Context Map written with 'ContextMapper DSL' */ 
+
+ContextMap CONTEXTMAPPRACTICA { 
+
+    type = SYSTEM_LANDSCAPE 
+
+    state = TO_BE   
+
+    /* Add bounded contexts to this context map: */ 
+
+    contains AtencionAlCliente 
+    contains GestionDeInventarios 
+    contains GestionDePoliticasEmpresariales 
+    contains InicioAutentificacion 
+    contains Usuario 
+    contains ComercioOnline 
+    contains GestionDePagos 
+    contains PaymentGateway 
+    contains GestionDeEnvios 
+    contains GestiondeContenido 
+    contains OptimizadorDeMotoresDeBusqueda 
+    contains SocialMediaIntegration 
+    contains ServicioDeGeocalizacion 
+    contains EmailServicesIntegration 
+
+
+    /* Define the context relationships: */  
+    GestionDeInventarios <- ComercioOnline 
+    AtencionAlCliente <-> Usuario 
+    GestionDePoliticasEmpresariales <-> AtencionAlCliente 
+    Usuario  <- ComercioOnline 
+    InicioAutentificacion <- Usuario  
+    GestionDePagos <-> ComercioOnline 
+    PaymentGateway <-  GestionDePagos 
+    GestionDeEnvios <- ComercioOnline 
+    GestiondeContenido <- ComercioOnline 
+    OptimizadorDeMotoresDeBusqueda <- GestiondeContenido 
+    SocialMediaIntegration <- GestiondeContenido 
+    ServicioDeGeocalizacion <- GestionDeEnvios 
+    EmailServicesIntegration <- GestionDeEnvios 
+} 
+
+ 
+BoundedContext AtencionAlCliente implements AtencionAlCliente 
+BoundedContext GestionDeInventarios implements AtencionAlCliente 
+BoundedContext GestionDePoliticasEmpresariales implements GestionDePoliticasEmpresariales 
+BoundedContext InicioAutentificacion implements InicioAutentificacion 
+BoundedContext Usuario implements ComercioOnline 
+BoundedContext ComercioOnline implements AtencionAlCliente 
+BoundedContext GestionDePagos implements AtencionAlCliente 
+BoundedContext PaymentGateway implements AtencionAlCliente 
+BoundedContext GestionDeEnvios implements AtencionAlCliente 
+BoundedContext GestiondeContenido implements AtencionAlCliente 
+BoundedContext OptimizadorDeMotoresDeBusqueda implements AtencionAlCliente 
+BoundedContext SocialMediaIntegration implements AtencionAlCliente 
+BoundedContext ServicioDeGeocalizacion implements AtencionAlCliente 
+BoundedContext EmailServicesIntegration implements AtencionAlCliente 
+
+     
+
+Domain InsuranceDomain { 
+    Subdomain AtencionAlCliente { 
+        type = SUPPORTING_DOMAIN 
+        domainVisionStatement = "Subdomain managing everything customer-related." 
+    } 
+
+    Subdomain InicioAutentificacion { 
+        type = GENERIC_SUBDOMAIN 
+        domainVisionStatement = "Subdomain managing contracts and policies." 
+    } 
+
+    Subdomain GestionDePoliticasEmpresariales { 
+        type = SUPPORTING_DOMAIN 
+        domainVisionStatement = "Service (external system) to solve printing for all kinds of documents (debts, policies, etc.)" 
+    } 
+
+    Subdomain ComercioOnline { 
+        type = CORE_DOMAIN 
+        domainVisionStatement = "Subdomain supporting everything which relates to risk management." 
+    } 
+
+    Subdomain GestionDePagos { 
+        type = SUPPORTING_DOMAIN 
+        domainVisionStatement = "Subomain including everything related to the incoming money (debts, dunning, etc.)" 
+    } 
+
+    Subdomain PaymentGateway { 
+        type = GENERIC_SUBDOMAIN 
+        domainVisionStatement = "Subomain including everything related to the incoming money (debts, dunning, etc.)" 
+    } 
+
+    Subdomain GestionDeEnvios { 
+        type = SUPPORTING_DOMAIN 
+        domainVisionStatement = "Subomain including everything related to the incoming money (debts, dunning, etc.)" 
+    } 
+
+    Subdomain GestiondeContenido { 
+        type = SUPPORTING_DOMAIN 
+        domainVisionStatement = "Subomain including everything related to the incoming money (debts, dunning, etc.)" 
+    } 
+
+    Subdomain OptimizadorDeMotoresDeBusqueda { 
+        type = GENERIC_SUBDOMAIN 
+        domainVisionStatement = "Subomain including everything related to the incoming money (debts, dunning, etc.)" 
+    } 
+
+    Subdomain SocialMediaIntegration { 
+        type = GENERIC_SUBDOMAIN 
+        domainVisionStatement = "Subomain including everything related to the incoming money (debts, dunning, etc.)" 
+    } 
+
+    Subdomain ServicioDeGeocalizacion { 
+        type = GENERIC_SUBDOMAIN 
+        domainVisionStatement = "Subomain including everything related to the incoming money (debts, dunning, etc.)" 
+    } 
+
+    Subdomain EmailServicesIntegration { 
+        type = GENERIC_SUBDOMAIN 
+        domainVisionStatement = "Subomain including everything related to the incoming money (debts, dunning, etc.)" 
+    } 
+
+} 
